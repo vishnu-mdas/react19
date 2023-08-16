@@ -34,6 +34,11 @@ const ProfileScreen = () => {
       toast.error('Passwords do not match');
     } else {
       try {
+        if (image && !image.type.startsWith('image/')) {
+          // Check if the uploaded file is an image
+          toast.error('Please upload a valid image file');
+          return;
+        }
      
         const formData = new FormData();
         formData.append('_id', userInfo._id);

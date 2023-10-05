@@ -9,7 +9,7 @@ const AdHomeScreen = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/admin");
+        const response = await axios.get("http://localhost:8000/api/admin");
         console.log(response.data.users);
         setUsers(response.data.users);
       } catch (error) {
@@ -32,7 +32,7 @@ const AdHomeScreen = () => {
     }
 
     try {
-      const response = await axios.delete(`http://localhost:5000/api/admin/${userId}`);
+      const response = await axios.delete(`http://localhost:8000/api/admin/${userId}`);
       if (response.status === 200) {
         console.log(response.data.message); // User deleted successfully
         // Update the user list after successful deletion
@@ -52,7 +52,7 @@ const AdHomeScreen = () => {
     }
   
     try {
-      const response = await axios.put(`http://localhost:5000/api/admin/${isBlocked ? 'unblock' : 'block'}/${userId}`);
+      const response = await axios.put(`http://localhost:8000/api/admin/${isBlocked ? 'unblock' : 'block'}/${userId}`);
       if (response.status === 200) {
         console.log(response.data.message);
         // Update the user list after successful block/unblock

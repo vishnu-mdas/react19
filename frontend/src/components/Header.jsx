@@ -38,7 +38,7 @@ const Header = () =>{
                             { userInfo ? (
                                 <>
                                 <Col xs={6} md={4}>
-                                    <Image style={{width:"50px",marginRight:"20px"}} src={`http://localhost:5000/Images/${userInfo.image}`} roundedCircle />
+                                    <Image style={{width:"50px",marginRight:"20px"}} src={`http://localhost:8000/Images/${userInfo.image}`} roundedCircle />
                                  </Col>
                                 <NavDropdown title={userInfo.name} id='username'>
                                     <LinkContainer to='/profile'>

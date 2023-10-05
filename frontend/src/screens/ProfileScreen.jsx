@@ -75,7 +75,7 @@ const ProfileScreen = () => {
     
    
       <Col xs={6} md={4}>
-      <Image style={{width:"100px",marginRight:"20px",}} src={`http://localhost:5000/Images/${userInfo.image}`} roundedCircle />
+      <Image style={{width:"100px",marginRight:"20px",}} src={`http://localhost:8000/Images/${userInfo.image}`} roundedCircle />
       </Col>
       <Form.Group className="my-2" controlId="image">
       
